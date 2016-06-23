@@ -167,7 +167,7 @@ geffen,203,116,0	script	Guide#gef::GefGuide	705,{
 			set .@loop1,0;
 		}
 	}
-	cutin "gef_soldier",255;
+	cutin "",255;
 	end;
 }
 

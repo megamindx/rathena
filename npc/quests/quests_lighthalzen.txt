@@ -2551,7 +2551,7 @@ lighthalzen,337,232,3	script	Maku	870,{
 		mes "to read? Alright, I owe him a";
 		mes "favor or two, so I oughta...";
 		next;
-		cutin "lhz_macu06",255;
+		cutin "",255;
 		mes "[Benkaistein's Journal]";
 		mes "^856363Today, me, Digotz and";
 		mes "Maku played this crazy flying";
@@ -2679,7 +2679,7 @@ lighthalzen,337,232,3	script	Maku	870,{
 		mes "fun of Digotz. Bwahahaha!";
 		mes "But yeah, um, thanks. Not";
 		mes "that I'm grateful or anything.";
-		cutin "lhz_macu07",255;
+		cutin "",255;
 		next;
 		delitem 7351,1; //Friend's_Diary
 		set friendship,14;
@@ -2824,7 +2824,7 @@ lighthalzen,337,232,3	script	Maku	870,{
 					next;
 					input .@input$;
 					if (.@input$ == "Not to mention an apology!") {
-						cutin "lhz_macu05",255;
+						cutin "",255;
 						mes "[Maku]";
 						mes "Me, apologize?!";
 						mes "He should be on his hands";
@@ -2854,7 +2854,7 @@ lighthalzen,337,232,3	script	Maku	870,{
 								mes "I'm gonna plaster his";
 								mes "face all over the floor.";
 								close2;
-								cutin "lhz_macu06",255;
+								cutin "",255;
 								end;
 							}
 						}
@@ -8969,8 +8969,8 @@ lhz_fild02,228,214,0	script	Wounded Man	849,{
 				mes "What... What organization";
 				mes "are you working for...?";
 				next;
-				input @jargeah$;
-				if((@jargeah$ == "Kafra Corporation") || (@jargeah$ == "Secret Wing"))
+				input .@jargeah$;
+				if(.@jargeah$ == "Kafra Corporation" || .@jargeah$ == "Secret Wing")
 				{
 					mes "[Jargeah]";
 					mes "Th-thank goodness!";

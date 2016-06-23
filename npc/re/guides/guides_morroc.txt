@@ -1,19 +1,19 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Morroc Guides
-//===== By: ================================================== 
+//===== By: ==================================================
 //= L0ne_W0lf
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.2
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Guides for the city of Morroc and Morroc Ruins.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.0 First version, Renewal guide.
 //= 1.1 Fixed and optimized. [Euphy]
 //= 1.2 Navigation system update. [Euphy]
-//============================================================ 
+//============================================================
 
 morocc,153,286,6	script	Guide#01morocc::GuideMorroc	707,{
 	cutin "moc_soldier",2;
@@ -150,7 +150,7 @@ morocc,153,286,6	script	Guide#01morocc::GuideMorroc	707,{
 			mes "[Morroc Guide]";
 			mes "Be safe on your travels.";
 			close2;
-			cutin "moc_soldier",255;
+			cutin "",255;
 			end;
 		}
 	}
@@ -294,7 +294,7 @@ moc_ruins,159,53,3	script	Guide#01ruins::GuideMocRuins	707,{
 			mes "[Morroc Guide]";
 			mes "Be safe on your travels.";
 			close2;
-			cutin "moc_soldier",255;
+			cutin "",255;
 			end;
 		}
 	}

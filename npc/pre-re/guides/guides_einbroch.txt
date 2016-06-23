@@ -199,7 +199,7 @@ einbroch,72,202,4	script	Guide#ein::EinGuide	852,{
 			set .@loop1,0;
 		}
 	}
-	cutin "ein_soldier",255;
+	cutin "",255;
 	end;
 }
 
@@ -344,7 +344,7 @@ einbech,67,37,4	script	Guide#4ein::EinGuide2	852,{
 			set .@loop1,0;
 		}
 	}
-	cutin "ein_soldier",255;
+	cutin "",255;
 	end;
 }
 

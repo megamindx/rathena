@@ -1,12 +1,12 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= God Item Quest - Megingjard Seal
-//===== By: ================================================== 
+//===== By: ==================================================
 //= SinSloth
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 2.2
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= Quest for breaking the seal of Megingjard.
 //===== Additional Comments: =================================
 //= 1.0 First version. Thanks to SinSloth for scripting it. [MasterOfMuppets]
@@ -534,7 +534,7 @@ prt_castle,44,151,0	script	Rebarev Doug	56,{
 		mes "done a thousand years ago, we shall vanquish the hordes of Demons when the day comes.";
 	}
 	close2;
-	cutin "god_rebeireb",255;
+	cutin "",255;
 	end;
 }
 

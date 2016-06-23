@@ -1,17 +1,17 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Hunter Job Quest
-//===== By: ================================================== 
+//===== By: ==================================================
 //= EREMES THE CANIVALIZER (Aegis)Translated by yoshiki (Aegis)
 //= Converted by kobra_k88
 //= Further bugfixed and tested by Lupus
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 3.7
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Job Change quest for Hunter class.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 0.5 Fully working.
 //= 0.6 Changed global variable names to unique ones.
 //= 0.7 - 0.8 Updates for rAthena +Knight2,Crusader2 fix
@@ -53,10 +53,10 @@
 //= 3.5 Added Quest Log commands. [Kisuka]
 //= 3.6 Removed the need for use of 'goto.' [L0ne_W0lf]
 //= 3.7 Modified the quest to renewal. [Vali] (Thanks to Muad_Dib for the necessary info).
-//============================================================ 
+//============================================================
 
 // Notices in the old Hunter Guild.
-//============================================================ 
+//============================================================
 in_hunter,99,99,4	script	Hunter Info#hnt::HntNotice	727,{
 	mes "============ Notice ============";
 	mes "We would like to inform that the Hunter Job Change Location";
@@ -77,7 +77,7 @@ in_hunter,99,99,4	script	Hunter Info#hnt::HntNotice	727,{
 pay_fild10,148,252,3	duplicate(HntNotice)	Job Change Location#hu	857
 
 // Actual Job quest start
-//============================================================ 
+//============================================================
 hu_in01,386,373,4	script	Hunter Guildsman#hnt	727,{
 	if (Upper == 1) {
 		mes "[Hunter Sherin]";
@@ -781,7 +781,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 			mes "[Hunter Guildmaster]";
 			mes "This is to test your ability to move swiftly and locate targets in various situations.";
 			close2;
-			cutin "job_huntermaster",255;
+			cutin "",255;
 			end;
 		case 2:
 			mes "[Hunter Guildmaster]";
@@ -790,7 +790,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 			mes "[Hunter Guildmaster]";
 			mes "You will pass if you are able to escape in the 12 o'clock direction of the map when the switch is activated.";
 			close2;
-			cutin "job_huntermaster",255;
+			cutin "",255;
 			end;
 		case 3:
 			mes "[Hunter Guildmaster]";
@@ -802,7 +802,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 			mes "[Hunter Guildmaster]";
 			mes "If the person currently taking the test passes or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
 			close2;
-			cutin "job_huntermaster",255;
+			cutin "",255;
 			end;
 		case 4:
 			if (.@a0) {
@@ -824,7 +824,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 		set HNTR_Q,12;
 		changequest 4010,4011;
 		warp "job_hunte",176,22;
-		cutin "job_huntermaster",255;
+		cutin "",255;
 		end;
 	}
 	else if (HNTR_Q > 1 && HNTR_Q < 10) {
@@ -839,7 +839,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 		mes "[Hunter Guildmaster]";
 		mes "Stop by once you have gathered all the items needed for the test.";
 		close2;
-		cutin "job_huntermaster",255;
+		cutin "",255;
 		end;
 	}
 	else if (HNTR_Q == 10) {
@@ -853,7 +853,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 		mes "[Hunter]";
 		mes "If you wish to change jobs, I think you need to go visit the person at Payon Central Palace.";
 		close2;
-		cutin "job_huntermaster",255;
+		cutin "",255;
 		end;
 	}
 	else if (HNTR_Q > 11 && HNTR_Q < 16) {
@@ -873,7 +873,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 			mes "[Hunter Guildmaster]";
 			mes "This is to test your ability to move swiftly and locate targets in various situations.";
 			close2;
-			cutin "job_huntermaster",255;
+			cutin "",255;
 			end;
 		case 2:
 			mes "[Hunter Guildmaster]";
@@ -882,7 +882,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 			mes "[Hunter Guildmaster]";
 			mes "You will pass if you are able to escape in the 12 o'clock direction of the map when the switch is activated.";
 			close2;
-			cutin "job_huntermaster",255;
+			cutin "",255;
 			end;
 		case 3:
 			mes "[Hunter Guildmaster]";
@@ -894,7 +894,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 			mes "[Hunter Guildmaster]";
 			mes "If the person currently taking the test passes or fails, the next person waiting in the chatroom is sent to the testing area. If nobody is waiting, the test will begin as soon as you enter the chatroom.";
 			close2;
-			cutin "job_huntermaster",255;
+			cutin "",255;
 			end;
 		case 4:
 			mes "[Hunter Guildmaster]";
@@ -916,7 +916,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 			mes "Okay!! Now...";
 			mes "Pass this time!";
 			close2;
-			cutin "job_huntermaster",255;
+			cutin "",255;
 			set HNTR_Q,12;
 			warp "job_hunte",176,22;
 			end;
@@ -927,7 +927,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 		mes "you're done with";
 		mes "your preparations.";
 		close2;
-		cutin "job_huntermaster",255;
+		cutin "",255;
 		end;
 	}
 	else if (HNTR_Q == 16) {
@@ -943,7 +943,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 		mes "There you go.";
 		mes "Now hurry back to the Hunter Guild, and join us~";
 		close2;
-		cutin "job_huntermaster",255;
+		cutin "",255;
 		end;
 	}
 	else if (HNTR_Q == 17) {
@@ -956,14 +956,14 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 		mes "for you back";
 		mes "at the Hunter Guild.";
 		close2;
-		cutin "job_huntermaster",255;
+		cutin "",255;
 		end;
 	}
 	else {
 		mes "[Hunter]";
 		mes "What do you want? I'm on an official trip and am busy at the moment. Now if you'll excuse me.";
 		close2;
-		cutin "job_huntermaster",255;
+		cutin "",255;
 		end;
 	}
 }
@@ -1267,7 +1267,7 @@ OnTouch:
 }
 
 // Hunter Job test traps.
-//============================================================ 
+//============================================================
 job_hunte,52,140,0	script	1-1::HntTrap	-1,0,1,{
 OnTouch:
 	switch(rand(200)) {

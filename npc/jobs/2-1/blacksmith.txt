@@ -286,7 +286,7 @@ ein_in01,18,28,4	script	Guildsman#BLS	731,{
 			mes "Congratulations!!!";
 			if (.@joblvl > 48)
 				getitem 999,30; //Steel
-			else 
+			else
 				getitem 999,5; //Steel
 			close;
 		}
@@ -1043,7 +1043,7 @@ morocc,27,112,4	script	Wickebine#BLS	725,{
 			next;
 			mes "- She seems to be upset. -";
 			close2;
-			cutin "Job_Black_hucke03",255;
+			cutin "",255;
 			end;
 		}
 		cutin "Job_Black_hucke02",2;
@@ -1083,7 +1083,7 @@ morocc,27,112,4	script	Wickebine#BLS	725,{
 		mes "a good job.";
 		mapannounce "morocc","Thanks for delivering, " + strcharinfo(0) + "~!",bc_map;
 		close2;
-		cutin "Job_Black_hucke02",255;
+		cutin "",255;
 		end;
 	}
 	else if (BSMITH_Q == 14) {
@@ -1092,7 +1092,7 @@ morocc,27,112,4	script	Wickebine#BLS	725,{
 		mes "[Wickebine]";
 		mes "Thanks for the delivery.";
 		close2;
-		cutin "Job_Black_hucke02",255;
+		cutin "",255;
 		end;
 	}
 	else {
@@ -1119,7 +1119,7 @@ morocc,27,112,4	script	Wickebine#BLS	725,{
 		mes "This is very";
 		mes "upsetting...";
 		close2;
-		cutin "Job_Black_hucke03",255;
+		cutin "",255;
 		end;
 	}
 }

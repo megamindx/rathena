@@ -1,12 +1,12 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Quest NPCs related to Ash-Vacuum
-//===== By: ================================================== 
+//===== By: ==================================================
 //= L0ne_W0lf
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 3.5
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Contains Quests:
 //= Onward to the Other World
@@ -20,7 +20,7 @@
 //= Part Time Work
 //= Report from the New World
 //= Persuing Rayan Moore
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 3.0 Fixed a missing variable check. [Joseph]
 //= 3.1 Updated RE/Pre-RE EXP. [Euphy]
 //= 3.2 Updated ep13_start and dialog to match official script. [Joseph]
@@ -28,10 +28,10 @@
 //= 3.3a Added Izlude RE coordinates. [Euphy]
 //= 3.4 Added GM management function and NPC. [Euphy]
 //= 3.5 Updated turn-in requirements for Tripatriate Union's Feud. [Euphy]
-//============================================================ 
+//============================================================
 
 // Onward to the New World :: ep13_gogo
-//============================================================ 
+//============================================================
 function	script	Promotional_Staff	{
 	mes "[Promotional Staff]";
 	mes "We are looking for adventurers who are super curious and extremely brave.";
@@ -1731,8 +1731,8 @@ moc_fild22b,230,197,5	script	Munkenro#2	967,{
 			mes "Ok, just have a good adventure.";
 			next;
 			set ep13_ryu,22;
-			changequest 10077,10078; 
-			donpcevent "Head of the Alliance#moo::OnEnable"; 
+			changequest 10077,10078;
+			donpcevent "Head of the Alliance#moo::OnEnable";
 			mes "[Munkenro]";
 			mes "If you are too late,";
 			mes "it will be considered as a failure, so come back soon.";
@@ -1961,7 +1961,7 @@ moc_fild22b,370,370,3	script	Allied Manager#gm	100,{
 }
 
 // New Surroundings :: ep13_newbs
-//============================================================ 
+//============================================================
 mid_camp,222,283,4	script	Marian#ep13bs	727,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 1000) {
 		mes "[Marian]";
@@ -3648,7 +3648,7 @@ mid_camp,267,258,0	script	Post#ep13bs2	111,{
 }
 
 // Attitude to the New :: ep13_ecology
-//============================================================ 
+//============================================================
 mid_camp,188,254,3	script	Monster Scholar#ep13	883,{
 	if (ep13_ryu < 100 && ep13_start < 100) {
 		mes "[Monster Scholar]";
@@ -4843,7 +4843,7 @@ man_fild01,92,230,3	script	Frozen Tree#evt_lumis	111,1,1,{
 }
 
 // Finding a Fairy & Finding a Giant Tree
-//============================================================ 
+//============================================================
 spl_fild02,34,223,5	script	Small Fairy#spl	442,{
 	if (BaseLevel > 69) {
 		if (checkquest(2158) == -1) {
@@ -4979,7 +4979,7 @@ mid_camp,212,237,5	script	Camp Guard Captain#man1	852,{
 }
 
 // The Tripartite Union's Feud :: ep13_1_rhea
-//============================================================ 
+//============================================================
 mid_campin,376,120,0	script	Research Official#ep131	754,3,3,{
 OnTouch:
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 3500) {
@@ -6947,7 +6947,7 @@ OnTimer300000:
 }
 
 // Part Time Work :: ep13_alba
-//============================================================ 
+//============================================================
 mid_camp,1,1,0	script	#timer_alba01	844,{
 	callfunc "F_GM_NPC";
 	mes "Please enter the password";
@@ -7555,7 +7555,7 @@ OnMyMobDead:
 }
 
 // Cat Hand Trading Post :: cat_yong
-//============================================================ 
+//============================================================
 mid_camp,62,125,4	script	Cat Hand Agent	421,{
 function Catwarp;
 	if (ep13_yong1 < 1) {
@@ -8483,7 +8483,7 @@ sec_in02,80,171,0	script	Piece of crack#sec	406,{
 }
 
 // Report from the New World :: ep13_1_edq
-//============================================================ 
+//============================================================
 mid_campin,90,121,5	script	Hibba Agip	459,{
 	cutin "ep13_captin_edq",2;
 	set .@start,(ep13_newbs + ep13_ryu + mao_morocc2 + ep13_1_rhea + ep13_animal + ep13_start);
@@ -8544,13 +8544,13 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		mes "What are you still doing here? Go, go speak to Abidal.";
 		set ep13_1_edq,1;
 		setquest 3085;
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ep13_1_edq == 1) {
 		mes "[Hibba Agip]";
 		mes "I'm not the one who has business with you. You should go speak to Staff Officer Abidal.";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ep13_1_edq == 2) {
@@ -8598,7 +8598,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "Travel safely, adventurer, and come back in one piece, alright?";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ep13_1_edq == 3) {
@@ -8607,7 +8607,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "I mean, if you want to be paid, you'll have to work. Do you still not understand? I'm saying that you better proceed with your mission.";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ep13_1_edq == 4) {
@@ -8690,7 +8690,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "I wish you good luck in finding the pages. Try to clean any smudges off them when you find them, alright?";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ep13_1_edq == 5) {
@@ -8773,7 +8773,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "I wish you good luck in finding the pages. Try to clean any smudges off them when you find them, alright?";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if ((ep13_1_edq == 61) || (ep13_1_edq == 62)) {
@@ -8782,7 +8782,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "I'm sure you'll easily find those if you keep your eyes open. I must warn you about the monsters around this area though. Who knows? They might love the taste of paper.";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if ((ep13_1_edq == 71) || (ep13_1_edq == 72)) {
@@ -8793,7 +8793,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		mes "[Hibba Agip]";
 		mes "While searching for the report, look around and meet our soldiers.";
 		mes "They've been sent to help you and Abidal. Ask their help if you think you need it.";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ep13_1_edq == 8) {
@@ -8825,7 +8825,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "Make sure to deliver the report to them without fail. Come back in one piece, alright?";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if ((ep13_1_edq == 9) && (countitem(11012) == 3)) {
@@ -8834,7 +8834,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "Make sure to deliver the report to them without fail. Come back in one piece, alright?";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ep13_1_edq == 9) {
@@ -8848,7 +8848,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "Make sure to deliver the report to them without fail. Come back in one piece, alright?";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ep13_1_edq > 100) {
@@ -8857,7 +8857,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "Make sure to deliver the report to them without fail. Come back in one piece, alright?";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ep13_1_edq == 13) {
@@ -8899,7 +8899,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		mes "[Hibba Agip]";
 		mes "Then I'll see you next time. Keep yourself in one piece, alright?";
 		mes "Hahaha!";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ep13_1_edq == 14) {
@@ -8914,7 +8914,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "There are many fun things outside. If you are an adventurer, go explore for yourself. Come back after you've explored the areas around the camp.";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if ((ep13_1_edq == 15) && (ins_nyd == 1)) {
@@ -8931,7 +8931,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 			next;
 			mes "[Hibba Agip]";
 			mes "Please be patient. I'll contact you when the time is right.";
-			cutin "ep13_captin_edq",255;
+			cutin "",255;
 			break;
 		case 2:
 			mes "[Hibba Agip]";
@@ -8949,7 +8949,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 			mes "[Hibba Agip]";
 			mes "Find the historian and see if he has any useful information for you.";
 			set ins_nyd,2;
-			cutin "ep13_captin_edq",255;
+			cutin "",255;
 			break;
 		}
 		close;
@@ -8960,7 +8960,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "His name is Magniffer... look for him.. he's somewhere around here...";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ins_nyd == 7) {
@@ -9088,12 +9088,12 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 					mes "[Hibba Agip]";
 					mes "You have your orders! Now I'm going to look for an adventurer who is willing to be sent to the Sapha.";
 					set ins_nyd,81;
-					cutin "ep13_captin_edq",255;
+					cutin "",255;
 					break;
 				case 2:
 					mes "[Hibba Agip]";
 					mes "Yeah? Then think again and decide.";
-					cutin "ep13_captin_edq",255;
+					cutin "",255;
 					break;
 				}
 				break;
@@ -9121,12 +9121,12 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 					mes "[Hibba Agip]";
 					mes "You have your orders! Now I'm going to look for an adventurer who is willing to be sent to the Laphine.";
 					set ins_nyd,82;
-					cutin "ep13_captin_edq",255;
+					cutin "",255;
 					break;
 				case 2:
 					mes "[Hibba Agip]";
 					mes "Yeah? then think again and decide.";
-					cutin "ep13_captin_edq",255;
+					cutin "",255;
 					break;
 				}
 				break;
@@ -9144,7 +9144,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "I'm going to look for an adventurer who is willing to be sent to the Sapha.";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if (ins_nyd == 82) {
@@ -9156,7 +9156,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "You have your orders! Now I'm going to look for an adventurer who is willing to be sent to the Laphine.";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if ((ins_nyd == 91) || (ins_nyd == 101) || (ins_nyd == 111)) {
@@ -9168,7 +9168,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "I'm going to send a few able men to the Sapha, you don't have to worry about it.";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if ((ins_nyd == 92) || (ins_nyd == 102) || (ins_nyd == 112)) {
@@ -9180,7 +9180,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "I'm going to send a few able men to the Laphine, you don't have to worry about it.";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else if ((ins_nyd == 121) || (ins_nyd == 131) || (ins_nyd == 132)) {
@@ -9204,7 +9204,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "I am looking forward to what will happen... Whew...";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 	else {
@@ -9228,7 +9228,7 @@ mid_campin,90,121,5	script	Hibba Agip	459,{
 		next;
 		mes "[Hibba Agip]";
 		mes "What is it? If you have too much time on your hands, you'd better go outside and find something productive to do.";
-		cutin "ep13_captin_edq",255;
+		cutin "",255;
 		close;
 	}
 }
@@ -9888,7 +9888,7 @@ mid_camp,206,286,3	script	Expedition Messenger	997,{
 			next;
 			mes "[???]";
 			mes "Haha, I may have failed to take the report, but it's better destroyed than in your hands!";
-			cutin "ep13_shadow_edq",255;
+			cutin "",255;
 			next;
 			donpcevent "Expedition Messenger#3::OnDisable";
 			mes "[Expedition Agent]";
@@ -9941,7 +9941,7 @@ mid_camp,206,286,3	script	Expedition Messenger	997,{
 			changequest 3087,3088;
 			mes "[???]";
 			mes "Haha, I may have failed to take the report, but it's better destroyed than in your hands!";
-			cutin "ep13_shadow_edq",255;
+			cutin "",255;
 			next;
 			donpcevent "Expedition Messenger#3::OnDisable";
 			mes "[Expedition Agent]";
@@ -10413,7 +10413,7 @@ OnMyMobDead:
 }
 
 // Persuing Rayan Moore :: ep13_moc2
-//============================================================ 
+//============================================================
 mid_campin,68,185,3	script	Pursuit Party Leader#1	803,{
 	if (checkweight(714,3) == 0) {
 		mes "- You cannot proceed with the quest when you're carrying too many items with you. -";
@@ -11509,7 +11509,7 @@ mid_camp,199,311,7	script	Mr. Kidd#ep13_dan01	884,{
 		mes "If you're not authorized, then turn away. This thing is too dangerous for capricious exploration.";
 		close2;
 	}
-	cutin "mocseal_kid01",255;
+	cutin "",255;
 	end;
 
 OnInit:
@@ -12995,7 +12995,7 @@ que_job01,84,17,3	script	Rin#moc_room2_1	885,{
 		mes "..Argh.. I'm still recovering .. I'm not supposed to move~";
 		close2;
 	}
-	cutin "moc2_rin03",255;
+	cutin "",255;
 	end;
 }
 
@@ -13087,7 +13087,7 @@ que_job01,144,54,3	script	Rin#moc_room2_2	885,{
 			mes "- Suddenly Rayan started talking nonsense and then pulled his hair out in anguish.";
 			mes "It seems as if he is trying to resist the evil personality within him. -";
 			next;
-			cutin "moc2_dan02",255;
+			cutin "",255;
 			switch(select("Smack his head.:Punch his stomach.:Slap his face.")) {
 			case 1:
 				specialeffect EF_HIT2,AREA,"Rayan#moc_room2_2";
@@ -13298,7 +13298,7 @@ que_job01,144,54,3	script	Rin#moc_room2_2	885,{
 		mes "Hurry up and go, don't bother me~";
 		close2;
 	}
-	cutin "moc2_rin01",255;
+	cutin "",255;
 	end;
 
 OnInit:
@@ -13320,7 +13320,7 @@ que_job01,143,50,1	script	Rayan#moc_room2_2	456,{
 	mes "I'm just glad that he's sane enough to speak to me.";
 	mes "I don't know what's going on with him.";
 	close2;
-	cutin "moc2_rin01",255;
+	cutin "",255;
 	end;
 
 OnInit:
@@ -13888,7 +13888,7 @@ que_dan02,115,53,3	script	Man#moc2_crazyR01	456,{
 		mes "[Mr. Kidd]";
 		mes "I'll bring this guy to Rin so she can interrogate him.";
 		mes "I'll see you at the camp.";
-		cutin "mocseal_kid01",255;
+		cutin "",255;
 		next;
 		mes "- You watched Mr. Kidd arrest the unconscious Rayan and take out a teleportation item. You decide to return to town. -";
 		set mao_morocc2,20;
@@ -13907,7 +13907,7 @@ que_dan02,115,53,3	script	Man#moc2_crazyR01	456,{
 		percentheal -100,0;
 		end;
 	}
-	cutin "mocseal_kid01",255;
+	cutin "",255;
 	end;
 }
 
@@ -13955,7 +13955,7 @@ que_dan02,102,42,3	script	Disfigured Corpse#moc2	457,{
 }
 
 // Ash-Vacuum Warper :: gogoash
-//============================================================ 
+//============================================================
 /*
 // Event NPC, now disabled on official servers.
 prontera,161,192,5	script	Ash-Vacuum Warper	707,{
@@ -13985,9 +13985,9 @@ prontera,161,192,5	script	Ash-Vacuum Warper	707,{
 }
 */
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.0 First Version. [L0ne_W0lf]
 //= 1.1 I missed an end in one of the lhz guards. [L0ne_W0lf]
 //= 1.2 Fixed missing ends, wrong label and some typos [Gepard]

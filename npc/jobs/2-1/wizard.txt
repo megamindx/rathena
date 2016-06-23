@@ -1,16 +1,16 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Wizard Job Quest
-//===== By: ================================================== 
+//===== By: ==================================================
 //= (Aegis) Translated by yoshiki, converted by kobra_k88
 //= Further bugfixed and tested by Lupus
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 3.3
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= [Official Conversion]
 //= Job Change quest for Wizard class.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 2.4 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
 //= 2.5 Several bugfixes with the help of Barron-Monster. [L0ne_W0lf]
 //= 2.5a More bugfixes care of Barron-Monster. [L0ne_W0lf]
@@ -27,7 +27,7 @@
 //= 3.1 Removed the need for use of 'goto.' [L0ne_W0lf]
 //= 3.2 Modified the quest to renewal. [Vali] (Thanks to Muad_Dib for the necessary info).
 //= 3.3 Fixed waitingroom bug. [Euphy]
-//============================================================ 
+//============================================================
 
 gef_tower,111,37,4	script	Wizard Guildsman	70,{
 	if (Upper == 1) {
@@ -1668,7 +1668,7 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 			mes "[Maria]";
 			mes "Don't forget that Wizards grow and improve in power each and every day.";
 			close2;
-			cutin "job_wizard_maria01",255;
+			cutin "",255;
 			end;
 		}
 		else if (BaseClass == Job_Novice) {
@@ -1687,7 +1687,7 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 		mes "*Bark* Get lost!";
 		mes "I don't have time for people like you!";
 		close2;
-		cutin "job_wizard_maria02",255;
+		cutin "",255;
 		end;
 	}
 	if (WIZ_Q == 0) {
@@ -1798,14 +1798,14 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 			mes "[Maria]";
 			mes "It's better to just try it yourself than to listen to my descriptions.";
 			close2;
-			cutin "job_wizard_maria01",255;
+			cutin "",255;
 			warp "gef_dun00",116,102;
 			end;
 		case 2:
 			mes "[Maria]";
 			mes "Really? Ok, then go apply and do your best.";
 			close2;
-			cutin "job_wizard_maria01",255;
+			cutin "",255;
 			end;
 		case 3:
 			cutin "job_wizard_maria02",2;
@@ -1815,7 +1815,7 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 			mes "[Maria]";
 			mes "Dang it! I hope you FAIL!! Go get lost!!";
 			close2;
-			cutin "job_wizard_maria01",255;
+			cutin "",255;
 			warp "gef_dun00",116,102;
 			end;
 		}
@@ -1854,7 +1854,7 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 		mes "Anyways, try your best.";
 		mes "This is the basics of being a Wizard.";
 		close2;
-		cutin "job_wizard_maria01",255;
+		cutin "",255;
 		end;
 	}
 	else if (WIZ_Q == 2) {
@@ -1891,7 +1891,7 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 		mes "But anyways, always try your best.";
 		mes "It's the basics of being a Wizard.";
 		close2;
-		cutin "job_wizard_maria01",255;
+		cutin "",255;
 		end;
 	}
 	else if (WIZ_Q == 3) {
@@ -1900,7 +1900,7 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 		mes "Don't be too relieved just after the first test.";
 		mes "Try your best, as you still have two more tests to go.";
 		close2;
-		cutin "job_wizard_maria01",255;
+		cutin "",255;
 		end;
 	}
 	else if (WIZ_Q == 4) {
@@ -1912,7 +1912,7 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 		mes "[Maria]";
 		mes "*wimper*...Blizadris...you suck...Zzz...";
 		close2;
-		cutin "job_wizard_maria02",255;
+		cutin "",255;
 		end;
 	}
 	else if (WIZ_Q == 5) {
@@ -1924,7 +1924,7 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 		mes "Well, try your best to the very end.";
 		mes "Laurel is waiting.";
 		close2;
-		cutin "job_wizard_maria01",255;
+		cutin "",255;
 		end;
 	}
 	else if (WIZ_Q == 6) {
@@ -1945,7 +1945,7 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 		mes "*Grrr* Anyways, continue the test.";
 		mes "Don't have a weak mind, *woof* and go back! *Bark* *Bark* Right this moment! *BARK*";
 		close2;
-		cutin "job_wizard_maria01",255;
+		cutin "",255;
 		end;
 	}
 	else if (WIZ_Q == 7) {
@@ -1957,14 +1957,14 @@ gef_tower,107,36,4	script	White Dog#wiz	81,{
 		mes "[Maria]";
 		mes "Congratulations. Always give your best at everything, no matter what.";
 		close2;
-		cutin "job_wizard_maria01",255;
+		cutin "",255;
 		end;
 	}
 }
 
-//============================================================ 
+//============================================================
 // Old changelog
-//============================================================ 
+//============================================================
 //= 1.1 Now using the initnpctimer command, donpcevent,
 //= and new waitingroom event commands.  No more addtimer spamming.
 //= No longer have to talk to the npc to take the test.  Just enter the chat room.

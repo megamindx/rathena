@@ -79,7 +79,7 @@ function	script	F_GldManager	{
 				mes "[ Kafra Staff ]";
 				mes "How do you do? I'm here to provide you with helpful service! I'll do the best I can to serve you.";
 				next;
-				cutin "kafra_01",255;
+				cutin "",255;
 				mes "[ "+ .@npc_name$ +" ]";
 				//mes "Your employment contract lasts ^5533FF1 month^000000.  After this term is over you will have to create a new contract.";
 				mes "I think the Kafra Staff will benefit our guild members.";
@@ -106,14 +106,14 @@ function	script	F_GldManager	{
 					next;
 					disablenpc "Kafra Staff#"+getarg(4);
 					SetCastleData .@map_name$,9,0;
-					cutin "kafra_01",255;
+					cutin "",255;
 					mes "[ "+ .@npc_name$ +" ]";
 					mes "The Kafra has been dismissed.  But... we should really get a Kafra as soon as possible!";
 					return;
 				ssM_KafEnd2:
 					mes "[ Kafra Staff ]";
 					mes "Thank you master, I'll do my best! ^^.";
-					cutin "kafra_01",255;
+					cutin "",255;
 					return;
 			sM_KafEnd2:
 				mes "[ "+ .@npc_name$ +" ]";

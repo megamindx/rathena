@@ -1,19 +1,19 @@
-//===== rAthena Script ======================================= 
+//===== rAthena Script =======================================
 //= Old Glast Heim
-//===== By: ================================================== 
+//===== By: ==================================================
 //= Ziu, Heris (translation)
-//===== Current Version: ===================================== 
+//===== Current Version: =====================================
 //= 1.1
-//===== Compatible With: ===================================== 
+//===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= Discover the history of events that took place in the
 //= Glast Heim castle and how it ended up in ruins.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.0 First version. [Euphy]
 //=     This is a custom version, and may contain bugs.
 //= 1.1 Bug fixes; removed redundant OnInstanceInit scripts.
-//============================================================ 
+//============================================================
 
 glast_01,204,273,6	script	Hugin#ghinstance	755,{
 	mes "^ff0000This isn't considered a normal progression dungeon. Please note this point.^000000";
@@ -130,7 +130,7 @@ glast_01,204,273,6	script	Hugin#ghinstance	755,{
 		mes "Hurry up! Inform Sir Heinrich that Himmelmez is coming. I will briefly explore the enchantments she made to this place!";
 		npctalk "Varmunt : Hurry up! Inform Sir Heinrich that Himmelmez is coming. I will briefly explore the enchantments she made to this place!";
 		close2;
-		cutin "gl_barmund2",255;
+		cutin "",255;
 		donpcevent instance_npcname("Varmunt#ghinstance1")+"::OnDisable2";
 		end;
 	} else {
@@ -139,7 +139,7 @@ glast_01,204,273,6	script	Hugin#ghinstance	755,{
 		mes "need his help.";
 		cutin "gl_barmund2",2;
 		close2;
-		cutin "gl_barmund2",255;
+		cutin "",255;
 		end;
 	}
 OnInstanceInit:
@@ -253,7 +253,7 @@ OnEnable:
 		mes "["+strcharinfo(0)+"]";
 		mes "Even if you don't believe it, do something. We do not have much time!";
 		unittalk getcharid(3), strcharinfo(0) +" : Even if you don't believe it, do something. We do not have much time!";
-		cutin "gl_barmund2",255;
+		cutin "",255;
 		next;
 		mes "[Heinrich]";
 		mes "I will be glad if you give me two minutes, please. But now the king isn't in his room.";
@@ -269,7 +269,7 @@ OnEnable:
 		donpcevent instance_npcname("#talkinstance1")+"::OnEnable";
 		mapannounce instance_mapname("1@gl_k"), "???? Shout: Ohohohoho~!",bc_map,"0xFFFF00";
 		close2;
-		cutin "gl_heinrich1",255;
+		cutin "",255;
 		end;
 	} else {
 		mes "[Heinrich]";
@@ -277,7 +277,7 @@ OnEnable:
 		mes "I need to talk to him.";
 		cutin "gl_heinrich2",2;
 		close2;
-		cutin "gl_heinrich2",255;
+		cutin "",255;
 		end;
 	}
 OnInstanceInit:
@@ -466,7 +466,7 @@ OnTimer35000:
 	end;
 OnTimer45000:
 	donpcevent instance_npcname("Himmelmez#ghinstance1")+"::OnTalk4";
-	end;	
+	end;
 OnTimer50000:
 	donpcevent instance_npcname("Himmelmez#ghinstance1")+"::OnTalk5";
 	end;
@@ -503,7 +503,7 @@ OnTimer85000:
 	hideonnpc instance_npcname("Khalitzburg Crusader#22");
 
 	set .@map$, instance_mapname("1@gl_k");
-	set .@label$, instance_npcname("#talkinstance1")+"::OnMyMobDead"; 
+	set .@label$, instance_npcname("#talkinstance1")+"::OnMyMobDead";
 	monster .@map$,145,59,"Abyss Knight",2470,1,.@label$;
 	monster .@map$,154,59,"Abyss Knight",2470,1,.@label$;
 	monster .@map$,145,69,"Abyss Knight",2470,1,.@label$;
@@ -544,7 +544,7 @@ OnTimer88000:
 	hideonnpc instance_npcname(".#ghinstance22");
 
 	set .@map$, instance_mapname("1@gl_k");
-	set .@label$, instance_npcname("#talkinstance1")+"::OnMyMobDead"; 
+	set .@label$, instance_npcname("#talkinstance1")+"::OnMyMobDead";
 	monster .@map$,145,54,"Khalitzburg",2471,1,.@label$;
 	monster .@map$,154,54,"Khalitzburg",2471,1,.@label$;
 	monster .@map$,145,64,"Khalitzburg",2471,1,.@label$;
@@ -1162,7 +1162,7 @@ OnTimer38000:
 	mes "Himmelmez... You made my men get killed and I will never forget that.";
 	cutin "gl_heinrich1",2;
 	close2;
-	cutin "gl_heinrich1",255;
+	cutin "",255;
 	end;
 OnInstanceInit:
 OnDisable:
@@ -1187,7 +1187,7 @@ OnTalk3:
 	mes "No need to stare at me with so insecure eyes. Soon they'll become relaxed...";
 	cutin "gl_himel2",2;
 	close2;
-	cutin "gl_himel2",255;
+	cutin "",255;
 	end;
 OnInstanceInit:
 OnDisable:
@@ -1230,7 +1230,7 @@ OnTalk6:
 			getitem 6607,1; //Temporal_Crystal
 			getitem 6608,1; //Coagulated_Spell
 			close2;
-			cutin "gl_barmund1",255;
+			cutin "",255;
 			end;
 		}
 	}
@@ -1238,7 +1238,7 @@ OnTalk6:
 	mes "Even after all this time, it is impossible to prevent from the will of the Transcendent.";
 	cutin "gl_barmund1",2;
 	close2;
-	cutin "gl_barmund2",255;
+	cutin "",255;
 	end;
 OnInstanceInit:
 OnDisable:
@@ -1263,7 +1263,7 @@ OnTalk2:
 	mes "are everywhere around here...";
 	cutin "gl_heinrich1",2;
 	close2;
-	cutin "gl_heinrich1",255;
+	cutin "",255;
 	end;
 OnInstanceInit:
 OnDisable:
@@ -1294,7 +1294,7 @@ OnTalk5:
 	mes "Why am I doing this again? Doesn't seem like the first time. I've seen this place repeatedly dozens of times in my dreams. This feeling...";
 	cutin "gl_barmund1",2;
 	close2;
-	cutin "gl_barmund1",255;
+	cutin "",255;
 	end;
 OnInstanceInit:
 OnDisable:
@@ -1695,7 +1695,7 @@ OnTalk6:
 	mes "eternal confinement...";
 	cutin "gl_barmund2",2;
 	close2;
-	cutin "gl_barmund2",255;
+	cutin "",255;
 	end;
 OnInstanceInit:
 OnDisable:
@@ -1710,7 +1710,7 @@ OnTalk1:
 }
 
 2@gl_k,158,252,3	script	Himmelmez#ghinstance4	650,4,4,{
-	end;	
+	end;
 OnInstanceInit:
 OnDisable:
 	hideonnpc instance_npcname("Himmelmez#ghinstance4");

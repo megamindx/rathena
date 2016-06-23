@@ -6,10 +6,10 @@
 //= 1.0
 //===== Compatible With: =====================================
 //= rAthena Project
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= Prevents players from using /memo on a map.
 //= Also disables marriage warp skills.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.0 Renewal split. [Euphy]
 //============================================================
 

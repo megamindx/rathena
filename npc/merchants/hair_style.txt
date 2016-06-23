@@ -746,7 +746,7 @@ lhz_in02,100,143,3	script	Hair Dresser#li	122,{
 					mes "is very neat and dandy.";
 					break;
 				case 5:
-					cutin "hair_f_01",255;
+					cutin "",255;
 					mes "[Prince Shammi]";
 					mes "No? You didn't want";
 					mes "to take a look? Please,";

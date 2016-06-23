@@ -45,14 +45,14 @@ aldebaran,139,63,4	script	Soldier#alde	105,{
 		mes "^3355FF+^000000 -> Item Shop";
 		mes "^FF5555+^000000 -> Alchemist Guild";
 		close2;
-		cutin "prt_soldier",255;
+		cutin "",255;
 		end;
 	}
 	mes "[Al De Baran Guard]";
 	mes "We are sworn to protect Al De Baran! May the forces of evil always be crushed by the";
 	mes "righteous fist of good!";
 	close2;
-	cutin "prt_soldier",255;
+	cutin "",255;
 	end;
 }
 
@@ -104,6 +104,6 @@ aldebaran,133,108,4	script	Soldier#2alde	105,{
 		break;
 	}
 	close2;
-	cutin "prt_soldier",255;
+	cutin "",255;
 	end;
 }
